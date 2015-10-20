@@ -66,14 +66,14 @@ router.param('comment', function(req,res,next,id) {
     })
 });
 
-router.put('/posts/:post/comments/upvote', function (req,res,next) {
+router.put('/posts/:post/comments/:comment/upvote', function (req,res,next) {
     req.comment.upvote(function(err ,comment) {
         if (err) { return next(err); }
 
         res.json(comment);
     })
 });
-router.post('/posts/::post/comments', function(req,res,next) {
+router.post('/posts/:post/comments', function(req,res,next) {
     var comment = new Comment(req.body);
     comment.post = req.post;
 
