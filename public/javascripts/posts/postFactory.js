@@ -1,7 +1,12 @@
 /**
  * Created by lschubert on 10/24/15.
  */
-app.factory('posts', ['$http','auth', function($http, auth){
+app.factory('posts', postFactory);
+
+postFactory.$inject = ['$http','auth'];
+
+
+function postFactory($http, auth){
     var o = {
         posts: []
     };
@@ -45,4 +50,4 @@ app.factory('posts', ['$http','auth', function($http, auth){
         });
     };
     return o;
-}]);
+};

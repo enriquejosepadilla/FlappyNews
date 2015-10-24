@@ -1,7 +1,12 @@
 /**
  * Created by lschubert on 10/24/15.
  */
-app.factory('auth', ['$http', '$window', function($http, $window){
+app.factory('auth', authFactory);
+
+
+authFactory.$inject = ['$http', '$window'];
+
+function authFactory($http, $window){
     var auth = {};
     auth.saveToken = function (token){
         $window.localStorage['flapper-news-token'] = token;
@@ -43,4 +48,4 @@ app.factory('auth', ['$http', '$window', function($http, $window){
         $window.localStorage.removeItem('flapper-news-token');
     };
     return auth;
-}]);
+};

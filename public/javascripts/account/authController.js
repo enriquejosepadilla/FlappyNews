@@ -1,11 +1,14 @@
 /**
  * Created by lschubert on 10/24/15.
  */
-app.controller('AuthCtrl', [
-    '$scope',
-    '$state',
-    'auth',
-    function($scope, $state, auth){
+app.controller('AuthCtrl', authController);
+
+    authController.$inject = [
+        '$scope',
+        '$state',
+        'auth'];
+
+    function authController($scope, $state, auth){
         $scope.user = {};
 
         $scope.register = function(){
@@ -23,4 +26,5 @@ app.controller('AuthCtrl', [
                 $state.go('home');
             });
         };
-    }])
+    }
+
