@@ -13,8 +13,8 @@ require('./models/Comments');
 require('./models/Users');
 require('./config/passport');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+var routes = require('./express/index');
+var users = require('./express/users');
 
 var app = express();
 
