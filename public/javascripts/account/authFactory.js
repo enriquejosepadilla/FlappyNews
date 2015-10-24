@@ -1,6 +1,9 @@
 /**
  * Created by lschubert on 10/24/15.
  */
+(function(){
+    'use strict';
+
 app.factory('auth', authFactory);
 
 
@@ -49,3 +52,4 @@ function authFactory($http, $window){
     };
     return auth;
 };
+})()

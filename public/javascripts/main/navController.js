@@ -1,6 +1,9 @@
 /**
  * Created by lschubert on 10/24/15.
  */
+(function(){
+    'use strict';
+
 app.controller('NavCtrl', navController);
 
 navController.$inject = ['$scope', 'auth'];
@@ -12,3 +15,4 @@ navController.$inject = ['$scope', 'auth'];
         $scope.logOut = auth.logOut;
     }
 ;
+})()

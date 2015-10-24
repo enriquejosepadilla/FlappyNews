@@ -1,6 +1,9 @@
 /**
  * Created by lschubert on 10/24/15.
  */
+(function(){
+    'use strict';
+
 app.controller('MainCtrl', mainController);
 
 mainController.$inject = ['$scope', 'posts', 'auth'];
@@ -25,3 +28,4 @@ function mainController($scope,posts,auth){
     };
 
 }
+})()

@@ -1,6 +1,9 @@
 /**
  * Created by lschubert on 10/24/15.
  */
+(function(){
+    'use strict';
+
 app.controller('AuthCtrl', authController);
 
     authController.$inject = [
@@ -28,3 +31,5 @@ app.controller('AuthCtrl', authController);
         };
     }
 
+
+})()

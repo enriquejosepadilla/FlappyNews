@@ -1,6 +1,9 @@
 /**
  * Created by lschubert on 10/24/15.
  */
+(function(){
+    'use strict';
+
 app.factory('posts', postFactory);
 
 postFactory.$inject = ['$http','auth'];
@@ -51,3 +54,4 @@ function postFactory($http, auth){
     };
     return o;
 };
+})()
